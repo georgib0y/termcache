@@ -1,0 +1,11 @@
+#+title: Termcache
+#+author: George Bull
+* Overview
+Caches the output of a computationally expensive/long command so that the next
+time it is called it does not take as long.
+* Process
+1. Get the command and it's arguments
+2. Hash the command and look it up in the cache
+   a. If there is a valid entry to the command in the cache, print it to Stdout and exit
+3. Run the command, saving the output to the cache
+4. Print the cached command
